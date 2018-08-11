@@ -17,7 +17,7 @@ public class Runner<T> {
 		showArray(arr);
 	}
 
-	private static void showArray(int[] list) {
+	protected static void showArray(int[] list) {
 		for (int t : list) {
 			System.out.print(t + " ");
 		}
@@ -25,7 +25,7 @@ public class Runner<T> {
 
 	}
 
-	private static int[] generateRandomArray(int size) {
+	protected static int[] generateRandomArray(int size) {
 		int[] ar1 = new int[size];
 		for (int i = 0; i < ar1.length; i++) {
 			ar1[i] = (int) (Math.random() * 100);
