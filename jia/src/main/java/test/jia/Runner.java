@@ -6,7 +6,7 @@ import test.jia.v1.Merge;
  * Hello world!
  *
  */
-public class Runner<T> {
+public class Runner<E> {
 	public static void main(String[] args) {
 		int[] arr = generateRandomArray(4);
 //		Merge merge = new Merge();
@@ -34,6 +34,12 @@ public class Runner<T> {
 		System.out.println();
 		return ar1;
 
+	}
+	
+	public void swap(E[] arr, int from, int to) {
+		E temp = arr[from];
+		arr[from] = arr[to];
+		arr[to] = temp;
 	}
 
 }

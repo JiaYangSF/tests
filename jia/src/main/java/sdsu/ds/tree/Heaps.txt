@@ -1,0 +1,11 @@
+Heap:
+Min Heap: Root is the smallest
+Max Heap: Root is the largest
+
+Children left:   2*Parent+1 
+Children right:  2*Parent+2
+
+Parent: floor((children-1)/2)
+
+Arrays:
+Use the relationship with parent and child to code. 
