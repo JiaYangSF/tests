@@ -8,6 +8,7 @@ public class Merge extends Runner{
 		this.arr = arr;
 		temp = new int[arr.length];
 		split(0, arr.length-1);
+		System.out.println("Check local");
 		
 	}
 	private void split(int low, int high) {
