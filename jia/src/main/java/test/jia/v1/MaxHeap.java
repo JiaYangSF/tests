@@ -1,15 +1,15 @@
-package sdsu.ds.tree;
+package test.jia.v1;
 
 import test.jia.Runner;
 
-public class MaxHeap<E> extends Runner<E> {
+public class MaxHeap extends Runner {
 	int lastIndex;
 	int size;
-	E[] arr = (E[]) new Object[size];
+	int[] arr = new int[size];
 	
 	
-	public void add(E object) {
-		arr[++lastIndex]=object;
+	public void add(int data) {
+		arr[++lastIndex]=data;
 		trickleUp(lastIndex);
 	}
 	
@@ -17,15 +17,15 @@ public class MaxHeap<E> extends Runner<E> {
 		if(index == 0) return; // root
 		// calculate parent
 		int parent = (int) Math.floor((index-1)/2);
-		if(((Comparable<E>)arr[index]).compareTo(arr[parent])>0) {
+		if(arr[index]>arr[parent]) {
 			swap(arr, index, parent);
 			trickleUp(parent);
 		}		
 	}
 	
 
-	public E removeRoot() {
-		E temp = arr[0];
+	public int removeRoot() {
+		int temp = arr[0];
 		swap(arr, 0, lastIndex--);
 		tricleDown(0);
 		return temp;
@@ -35,12 +35,12 @@ public class MaxHeap<E> extends Runner<E> {
 		int left = 2*parent+1;
 		int right = 2*parent +2;
 		// swap with parent if left or right is bigger than parent
-		if(left == lastIndex && ((Comparable<E>)arr[parent]).compareTo(arr[left]) < 0) {
+		if(left == lastIndex && arr[parent]< arr[left]) {
 			swap(arr, parent, left);
 			return;
 		}
 		
-		if(right == lastIndex && ((Comparable<E>) arr[parent]).compareTo(arr[right])<0){
+		if(right == lastIndex && arr[parent]< arr[right]){
 			swap(arr, parent, right);
 			return;
 		}
@@ -51,11 +51,11 @@ public class MaxHeap<E> extends Runner<E> {
 		}
 		
 		// compare the left and right to pick which one to swap with
-		if(((Comparable<E>)arr[left]).compareTo(arr[right]) >0 && ((Comparable<E>)arr[left]).compareTo(arr[parent]) >0 ) {
+		if(arr[left]> arr[right] && arr[left]> arr[parent] ) {
 			swap(arr, left, parent);
 			tricleDown(left);
 			return;
-		}else if (((Comparable<E>)arr[right]).compareTo(arr[left]) >0 && ((Comparable<E>)arr[right]).compareTo(arr[parent]) >0 ){
+		}else if (arr[right]> arr[left]  && arr[right]> arr[parent] ){
 			swap(arr, right, parent);
 			tricleDown(right);
 			return;
