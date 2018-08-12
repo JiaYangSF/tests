@@ -1,6 +1,9 @@
 package test.jia;
 
+import junit.runner.Sorter.Swapper;
+import sdsu.ds.tree.MaxHeap;
 import test.jia.v1.Merge;
+import test.jia.v2.BuildHeapFromArray;
 
 /**
  * Hello world!
@@ -8,12 +11,19 @@ import test.jia.v1.Merge;
  */
 public class Runner<E> {
 	public static void main(String[] args) {
-		int[] arr = generateRandomArray(4);
-//		Merge merge = new Merge();
-//		merge.mergeSort(arr);
-//		showArray(arr);
-		Merge ms = new Merge();
-		ms.sort(arr);
+		// --------------- Generate Array ---------------\\
+		int[] arr = generateRandomArray(10);
+		
+		
+		// --------------- Merge Sort ---------------\\
+		/*Merge merge = new Merge();
+		merge.mergeSort(arr);
+		showArray(arr);*/
+		
+		
+		// --------------- Build the heap from array ---------------\\
+		BuildHeapFromArray heap = new BuildHeapFromArray();
+		heap.buildHeap(arr);
 		showArray(arr);
 	}
 
@@ -35,9 +45,15 @@ public class Runner<E> {
 		return ar1;
 
 	}
-	
+
 	public void swap(E[] arr, int from, int to) {
 		E temp = arr[from];
+		arr[from] = arr[to];
+		arr[to] = temp;
+	}
+
+	public void swap(int[] arr, int from, int to) {
+		int temp = arr[from];
 		arr[from] = arr[to];
 		arr[to] = temp;
 	}

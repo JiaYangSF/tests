@@ -8,4 +8,4 @@ Children right:  2*Parent+2
 Parent: floor((children-1)/2)
 
 Arrays:
-Use the relationship with parent and child to code. 
+Use the relationship with parent and child to cod e. 
