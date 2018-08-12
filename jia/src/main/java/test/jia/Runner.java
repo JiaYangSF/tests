@@ -1,9 +1,7 @@
 package test.jia;
 
-import junit.runner.Sorter.Swapper;
-import sdsu.ds.tree.MaxHeap;
-import test.jia.v1.Merge;
 import test.jia.v2.BuildHeapFromArray;
+import test.jia.v2.QuickSort;
 
 /**
  * Hello world!
@@ -22,8 +20,20 @@ public class Runner<E> {
 		
 		
 		// --------------- Build the heap from array ---------------\\
-		BuildHeapFromArray heap = new BuildHeapFromArray();
+		/*BuildHeapFromArray heap = new BuildHeapFromArray();
 		heap.buildHeap(arr);
+		showArray(arr);*/
+		
+		// --------------- Quick Sort ---------------\\
+		QuickSort sort = new QuickSort();
+		sort.sort(arr);
+		
+		
+		
+		
+		
+		
+		// --------------- Show array ---------------\\
 		showArray(arr);
 	}
 
