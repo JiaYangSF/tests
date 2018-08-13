@@ -1,8 +1,5 @@
 package test.jia;
 
-import junit.runner.Sorter.Swapper;
-import sdsu.ds.tree.MaxHeap;
-import test.jia.v1.Merge;
 import test.jia.v2.BuildHeapFromArray;
 
 /**
@@ -16,14 +13,24 @@ public class Runner<E> {
 		
 		
 		// --------------- Merge Sort ---------------\\
-		/*Merge merge = new Merge();
-		merge.mergeSort(arr);
-		showArray(arr);*/
+		/*MergeSort merge = new MergeSort();
+		merge.sort(arr);*/
 		
 		
 		// --------------- Build the heap from array ---------------\\
 		BuildHeapFromArray heap = new BuildHeapFromArray();
 		heap.buildHeap(arr);
+		
+		// --------------- Quick Sort ---------------\\
+		/*QuickSort sort = new QuickSort();
+		sort.sort(arr);
+		*/
+		
+		
+		
+		
+		
+		// --------------- Show array ---------------\\
 		showArray(arr);
 	}
 
