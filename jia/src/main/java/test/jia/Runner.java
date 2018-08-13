@@ -1,7 +1,6 @@
 package test.jia;
 
 import test.jia.v2.BuildHeapFromArray;
-import test.jia.v2.QuickSort;
 
 /**
  * Hello world!
@@ -14,20 +13,18 @@ public class Runner<E> {
 		
 		
 		// --------------- Merge Sort ---------------\\
-		/*Merge merge = new Merge();
-		merge.mergeSort(arr);
-		showArray(arr);*/
+		/*MergeSort merge = new MergeSort();
+		merge.sort(arr);*/
 		
 		
 		// --------------- Build the heap from array ---------------\\
-		/*BuildHeapFromArray heap = new BuildHeapFromArray();
+		BuildHeapFromArray heap = new BuildHeapFromArray();
 		heap.buildHeap(arr);
-		showArray(arr);*/
 		
 		// --------------- Quick Sort ---------------\\
-		QuickSort sort = new QuickSort();
+		/*QuickSort sort = new QuickSort();
 		sort.sort(arr);
-		
+		*/
 		
 		
 		
