@@ -18,7 +18,7 @@ public class HeapSort extends Runner{
 	            int temp = arr[0];
 	            arr[0] = arr[i];
 	            arr[i] = temp;
-	 
+	            System.out.println("Add feature in master");
 	            // call max heapify on the reduced heap
 	            heapify(arr, i, 0);
 	        }
