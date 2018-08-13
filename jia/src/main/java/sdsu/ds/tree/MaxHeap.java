@@ -33,35 +33,20 @@ public class MaxHeap<E> extends Runner<E> {
 
 	private void tricleDown(int parent) {
 		int left = 2*parent+1;
-		int right = 2*parent +2;
-		// swap with parent if left or right is bigger than parent
-		if(left == lastIndex && ((Comparable<E>)arr[parent]).compareTo(arr[left]) < 0) {
-			swap(arr, parent, left);
-			return;
-		}
-		
-		if(right == lastIndex && ((Comparable<E>) arr[parent]).compareTo(arr[right])<0){
-			swap(arr, parent, right);
-			return;
-		}
-		
-		// if left index or right index is bigger than last index, which means it's out of the tree
-		if(left >= lastIndex || right >=lastIndex) {
-			return;
-		}
-		
-		// compare the left and right to pick which one to swap with
-		if(((Comparable<E>)arr[left]).compareTo(arr[right]) >0 && ((Comparable<E>)arr[left]).compareTo(arr[parent]) >0 ) {
+		int right = 2*parent+2;
+		if(left == lastIndex && ((Comparable<E>) arr[left]).compareTo(arr[parent])>0) {
 			swap(arr, left, parent);
-			tricleDown(left);
-			return;
-		}else if (((Comparable<E>)arr[right]).compareTo(arr[left]) >0 && ((Comparable<E>)arr[right]).compareTo(arr[parent]) >0 ){
-			swap(arr, right, parent);
-			tricleDown(right);
 			return;
 		}
 		
+		if(right == lastIndex && ((Comparable<E>) arr[right]).compareTo(arr[parent])>0) {
+			swap(arr, right, parent);
+			return;
+		}
 		
+		if(left >= lastIndex || right >= lastIndex) {
+			return;
+		}
 		
 	}
 
