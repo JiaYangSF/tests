@@ -1,6 +1,7 @@
 package test.jia;
 
 import test.jia.v2.BuildHeapFromArray;
+import test.jia.v3.QuickSort;
 
 /**
  * Hello world!
@@ -22,9 +23,9 @@ public class Runner<E> {
 		heap.buildHeap(arr);
 		
 		// --------------- Quick Sort ---------------\\
-		/*QuickSort sort = new QuickSort();
+		QuickSort sort = new QuickSort();
 		sort.sort(arr);
-		*/
+		
 		
 		
 		
