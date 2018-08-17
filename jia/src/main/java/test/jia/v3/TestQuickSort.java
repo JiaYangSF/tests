@@ -2,7 +2,7 @@ package test.jia.v3;
 
 import test.jia.Runner;
 
-public class QuickSort extends Runner{
+public class TestQuickSort extends Runner{
 	int[] arr;
 	public void sort(int[] arr) {
 		this.arr = arr;
